@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
+import '../../CSS/PageTitle.css';
 
 class Visitors extends Component {
+
+  onClick = (event) => {
+    this.props.history.push('/Tickets');
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   
   render() {
     return (
       <React.Fragment>
-        <img src={process.env.PUBLIC_URL + 'headerImages/visitors.jpg'} style={{position: "relative", width: "100%"}} alt="header" />
-        <h1 style={h1Style}>Visitors</h1>
+        <img src={process.env.PUBLIC_URL + 'headerImages/visitors.jpg'} className="title-image" alt="header" />
+        <h1 className="title-text">Visitors</h1>
+        <br/>
+        <br/>
+
+        <button style={buttonStyle} onClick={this.onClick} type="button"  class="btn btn-secondary btn-lg btn-block">Buy tickets</button>
 
         <div style={pageStyle}>
           <hr/>
@@ -48,17 +61,6 @@ class Visitors extends Component {
   }
 }
 
-const h1Style = {
-  position: "absolute",
-  top: "40%",
-  left: "15%",
-  transform: "translate(-50%, -50%)",
-  fontSize: "8vw",
-  width: "70%",
-  height: "20%",
-  color: "#fff"
-}
-
 const pageStyle = {
   width: '80%',
   marginLeft: 'auto',
@@ -76,7 +78,15 @@ const img2Style = {
 }
 
 const textStyle = {
-    fontSize:'120%'
+  textAlign: 'left',
+  fontSize:'1.4vw'
+}
+
+const buttonStyle = {
+  fontSize:'3vw',
+  width: '60%',
+  marginLeft: 'auto',
+  marginRight: 'auto'
 }
 
 export default Visitors;

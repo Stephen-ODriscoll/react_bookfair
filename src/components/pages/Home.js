@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import '../../CSS/PageTitle.css';
 
 class Home extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   
   render() {
     return (
       <React.Fragment>
-        <img src={process.env.PUBLIC_URL + 'headerImages/home.jpg'} style={imgStyle} alt="header"/>
-        <h1 style={h1Style}>Home</h1>
+        <img src={process.env.PUBLIC_URL + 'headerImages/home.jpg'} className="title-image" alt="header"/>
+        <h1 className="title-text">Home</h1>
 
         <Row style={rowStyle}>
           <Col>
@@ -30,52 +36,41 @@ class Home extends Component {
 
         <Row style={linksStyle}>
           <Col>
-            <a href="./visitors">
+            <Link to="/visitors">
               <img src={process.env.PUBLIC_URL + "images/visitors.jpg"} style={imgStyle} alt="visitors"/>
               <div style={linkBoxStyle}>
                 <p>Visitors</p>
               </div>
-            </a>
+            </Link>
           </Col>
           <Col>
-            <a href="./search">
+            <Link to="/search">
               <img src={process.env.PUBLIC_URL + "images/search.jpg"} style={imgStyle} alt="search"/>
               <div style={linkBoxStyle}>
                 <p>Search</p>
               </div>
-            </a>
+            </Link>
           </Col>
           <Col>
-            <a href="./exhibitors">
+            <Link to="/exhibitors">
               <img src={process.env.PUBLIC_URL + "images/exhibitors.jpg"} style={imgStyle} alt="exhibitors"/>
               <div style={linkBoxStyle}>
                 <p>Exhibitors</p>
               </div>
-            </a>
+            </Link>
           </Col>
           <Col>
-            <a href="./about">
+            <Link to="/about">
               <img src={process.env.PUBLIC_URL + "images/about.jpg"} style={imgStyle} alt="about"/>
               <div style={linkBoxStyle}>
                 <p>About</p>
               </div>
-            </a>
+            </Link>
           </Col>
         </Row>
       </React.Fragment>
     );
   }
-}
-
-const h1Style = {
-  position: "absolute",
-  top: "40%",
-  left: "15%",
-  transform: "translate(-50%, -50%)",
-  fontSize: "8vw",
-  width: "70%",
-  height: "20%",
-  color: "#fff"
 }
 
 const pStyle = {

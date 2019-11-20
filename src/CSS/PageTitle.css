@@ -1,0 +1,15 @@
+
+.title-image {
+    position: relative;
+    width: 100%;
+}
+
+.title-text {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    font-size: 8vw;
+    width: 70%;
+    height: 20%;
+    color: #e7e6f2;
+  }

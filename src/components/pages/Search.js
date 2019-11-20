@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import '../../CSS/PageTitle.css';
 
 const books = [
   {
@@ -48,9 +49,13 @@ class Search extends Component {
     toDisplay: books
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   showBooks = () => {
     let display = []
-    
+
     for (let i = 0; i < this.state.toDisplay.length;) {
       let children = []
       //Inner loop to create children
@@ -82,8 +87,8 @@ class Search extends Component {
   render() {
     return (
       <React.Fragment>
-        <img src={process.env.PUBLIC_URL + 'headerImages/search.jpg'} style={{position: "relative", width: "100%"}} alt="header" />
-        <h1 style={h1Style}>Search</h1>
+        <img src={process.env.PUBLIC_URL + 'headerImages/search.jpg'} className="title-image" alt="header" />
+        <h1 className="title-text">Search</h1>
 
         <br/>
         <br/>
@@ -99,24 +104,14 @@ class Search extends Component {
   }
 }
 
-const h1Style = {
-  position: "absolute",
-  top: "40%",
-  left: "15%",
-  transform: "translate(-50%, -50%)",
-  fontSize: "8vw",
-  width: "70%",
-  height: "20%",
-  color: "#fff"
-}
-
 const searchStyle = {
-  marginLeft: '50px',
+  marginLeft: '8vw',
   width: '40%'
 }
 
 const titleStyle = {
-    color: '#fff'
+  fontSize: "2vw",
+  color: '#fff'
 }
 
 const rowStyle = {
@@ -128,6 +123,7 @@ const colStyle = {
   borderWidth: 'thin',
   borderRadius: '10px',
   background: '#4f4f4f',
+  fontSize: "1.2vw",
   color: '#000',
   padding: '5px',
   margin: '10px'
@@ -136,7 +132,7 @@ const colStyle = {
 const imgStyle = {
   float: 'left',
   width: 'auto',
-  height: '200px',
+  height: '15vw',
   margin: '5px'
 }
 

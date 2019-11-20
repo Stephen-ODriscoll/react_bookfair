@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Modal from 'react-bootstrap/Modal';
+import '../../CSS/PageTitle.css';
 
 class Tickets extends Component {
 
@@ -10,6 +11,10 @@ class Tickets extends Component {
     accepted: false,
     runningTotal: 0,
     showTerms: false
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0)
   }
 
   onCancel = (event) => {
@@ -67,7 +72,8 @@ class Tickets extends Component {
         </Modal.Header>
         <Modal.Body>{terms}</Modal.Body>
       </Modal>
-        <h1>Buy Tickets</h1>
+        <img src={process.env.PUBLIC_URL + 'headerImages/tickets.jpg'} className="title-image" alt="header"/>
+        <h1 className="title-text">Tickets</h1>
         <br/>
         <form style={formStyle}>
           <div class="row">
