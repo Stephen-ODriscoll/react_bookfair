@@ -146,8 +146,7 @@ const buttonStyle = {
 }
 
 const formStyle = {
-  marginRight: '20%',
-  marginLeft: '20%'
+  margin: '5% 20%'
 }
 
 const terms = <Modal.Body>Your registration for the Exhibition, or entry to our exhibition venue, 

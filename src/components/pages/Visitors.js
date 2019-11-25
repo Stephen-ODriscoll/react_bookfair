@@ -69,12 +69,14 @@ const pageStyle = {
 
 const img1Style = {
     width:'50%',
-    float: 'left'
+    float: 'left',
+    padding: '10px'
 }
 
 const img2Style = {
     width:'50%',
-    float: 'right'
+    float: 'right',
+    padding: '10px'
 }
 
 const textStyle = {
