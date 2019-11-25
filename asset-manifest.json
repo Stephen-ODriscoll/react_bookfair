@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react_bookfair/static/css/main.b297634d.chunk.css",
+    "main.js": "/react_bookfair/static/js/main.baf920dd.chunk.js",
+    "main.js.map": "/react_bookfair/static/js/main.baf920dd.chunk.js.map",
+    "runtime-main.js": "/react_bookfair/static/js/runtime-main.0f838177.js",
+    "runtime-main.js.map": "/react_bookfair/static/js/runtime-main.0f838177.js.map",
+    "static/css/2.510409cd.chunk.css": "/react_bookfair/static/css/2.510409cd.chunk.css",
+    "static/js/2.8e7c425b.chunk.js": "/react_bookfair/static/js/2.8e7c425b.chunk.js",
+    "static/js/2.8e7c425b.chunk.js.map": "/react_bookfair/static/js/2.8e7c425b.chunk.js.map",
+    "index.html": "/react_bookfair/index.html",
+    "precache-manifest.2e8a6f5fb47cfb146bf73b700c22b561.js": "/react_bookfair/precache-manifest.2e8a6f5fb47cfb146bf73b700c22b561.js",
+    "service-worker.js": "/react_bookfair/service-worker.js",
+    "static/css/2.510409cd.chunk.css.map": "/react_bookfair/static/css/2.510409cd.chunk.css.map",
+    "static/css/main.b297634d.chunk.css.map": "/react_bookfair/static/css/main.b297634d.chunk.css.map"
+  }
+}
