@@ -10,7 +10,7 @@ class About extends Component {
   render() {
     return (
       <React.Fragment>
-        <img src={process.env.PUBLIC_URL + 'headerImages/about.jpg'} className="title-image" alt="header" />
+        <img src={process.env.PUBLIC_URL + '/headerImages/about.jpg'} className="title-image" alt="header" />
         <h1 className="title-text">About</h1>
       </React.Fragment>
     );

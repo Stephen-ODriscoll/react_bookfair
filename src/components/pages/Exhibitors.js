@@ -38,7 +38,7 @@ class Exhibitors extends Component {
 
     for (let i = 0; i < exhibitors.length; i++) {
 
-      display.push(<Row><div style={rowStyle}><h3 style={titleStyle}>{exhibitors[i].name}</h3><img src={process.env.PUBLIC_URL + 'exhibitors/' + exhibitors[i].id + '.png'} style={imgStyle} alt={exhibitors[i].id} />{exhibitors[i].desc}</div></Row>)
+      display.push(<Row><div style={rowStyle}><h3 style={titleStyle}>{exhibitors[i].name}</h3><img src={process.env.PUBLIC_URL + '/exhibitors/' + exhibitors[i].id + '.png'} style={imgStyle} alt={exhibitors[i].id} />{exhibitors[i].desc}</div></Row>)
 
       if (left) {
         left = 0
@@ -60,7 +60,7 @@ class Exhibitors extends Component {
   render() {
     return (
       <React.Fragment>
-        <img src={process.env.PUBLIC_URL + 'headerImages/exhibitors.jpg'} className="title-image" alt="header" />
+        <img src={process.env.PUBLIC_URL + '/headerImages/exhibitors.jpg'} className="title-image" alt="header" />
         <h1 className="title-text">Exhibitors</h1>
 
         <div style={pageStyle}>

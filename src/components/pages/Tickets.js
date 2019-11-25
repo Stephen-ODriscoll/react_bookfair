@@ -72,7 +72,7 @@ class Tickets extends Component {
         </Modal.Header>
         <Modal.Body>{terms}</Modal.Body>
       </Modal>
-        <img src={process.env.PUBLIC_URL + 'headerImages/tickets.jpg'} className="title-image" alt="header"/>
+        <img src={process.env.PUBLIC_URL + '/headerImages/tickets.jpg'} className="title-image" alt="header"/>
         <h1 className="title-text">Tickets</h1>
         <br/>
         <form style={formStyle}>

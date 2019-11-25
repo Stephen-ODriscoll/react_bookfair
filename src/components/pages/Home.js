@@ -14,12 +14,12 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        <img src={process.env.PUBLIC_URL + 'headerImages/home.jpg'} className="title-image" alt="header"/>
+        <img src={process.env.PUBLIC_URL + '/headerImages/home.jpg'} className="title-image" alt="header"/>
         <h1 className="title-text">Home</h1>
 
         <Row style={rowStyle}>
           <Col>
-            <img src={process.env.PUBLIC_URL + "images/bookFair.jpg"} style={imgStyle} alt="bookFair"/>
+            <img src={process.env.PUBLIC_URL + "/images/bookFair.jpg"} style={imgStyle} alt="bookFair"/>
           </Col>
           <Col>
             <p style={pStyle}>
@@ -37,7 +37,7 @@ class Home extends Component {
         <Row style={linksStyle}>
           <Col>
             <Link to="/visitors">
-              <img src={process.env.PUBLIC_URL + "images/visitors.jpg"} style={imgStyle} alt="visitors"/>
+              <img src={process.env.PUBLIC_URL + "/images/visitors.jpg"} style={imgStyle} alt="visitors"/>
               <div style={linkBoxStyle}>
                 <p>Visitors</p>
               </div>
@@ -45,7 +45,7 @@ class Home extends Component {
           </Col>
           <Col>
             <Link to="/search">
-              <img src={process.env.PUBLIC_URL + "images/search.jpg"} style={imgStyle} alt="search"/>
+              <img src={process.env.PUBLIC_URL + "/images/search.jpg"} style={imgStyle} alt="search"/>
               <div style={linkBoxStyle}>
                 <p>Search</p>
               </div>
@@ -53,7 +53,7 @@ class Home extends Component {
           </Col>
           <Col>
             <Link to="/exhibitors">
-              <img src={process.env.PUBLIC_URL + "images/exhibitors.jpg"} style={imgStyle} alt="exhibitors"/>
+              <img src={process.env.PUBLIC_URL + "/images/exhibitors.jpg"} style={imgStyle} alt="exhibitors"/>
               <div style={linkBoxStyle}>
                 <p>Exhibitors</p>
               </div>
@@ -61,7 +61,7 @@ class Home extends Component {
           </Col>
           <Col>
             <Link to="/about">
-              <img src={process.env.PUBLIC_URL + "images/about.jpg"} style={imgStyle} alt="about"/>
+              <img src={process.env.PUBLIC_URL + "/images/about.jpg"} style={imgStyle} alt="about"/>
               <div style={linkBoxStyle}>
                 <p>About</p>
               </div>

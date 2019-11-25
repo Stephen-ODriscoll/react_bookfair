@@ -61,7 +61,7 @@ class Search extends Component {
       //Inner loop to create children
       for (let x = 0;x < 3; i++, x++) {
         if (i < this.state.toDisplay.length) {
-          children.push(<Col style={colStyle}><h3 style={titleStyle}>{this.state.toDisplay[i].name}</h3><img src={process.env.PUBLIC_URL + 'books/' + this.state.toDisplay[i].id + '.jpg'} style={imgStyle} alt={this.state.toDisplay[i].id} />{this.state.toDisplay[i].desc}</Col>)
+          children.push(<Col style={colStyle}><h3 style={titleStyle}>{this.state.toDisplay[i].name}</h3><img src={process.env.PUBLIC_URL + '/books/' + this.state.toDisplay[i].id + '.jpg'} style={imgStyle} alt={this.state.toDisplay[i].id} />{this.state.toDisplay[i].desc}</Col>)
         }
         else {
           children.push(<Col></Col>)
@@ -87,7 +87,7 @@ class Search extends Component {
   render() {
     return (
       <React.Fragment>
-        <img src={process.env.PUBLIC_URL + 'headerImages/search.jpg'} className="title-image" alt="header" />
+        <img src={process.env.PUBLIC_URL + '/headerImages/search.jpg'} className="title-image" alt="header" />
         <h1 className="title-text">Search</h1>
 
         <br/>

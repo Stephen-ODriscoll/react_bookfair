@@ -14,7 +14,7 @@ class Visitors extends Component {
   render() {
     return (
       <React.Fragment>
-        <img src={process.env.PUBLIC_URL + 'headerImages/visitors.jpg'} className="title-image" alt="header" />
+        <img src={process.env.PUBLIC_URL + '/headerImages/visitors.jpg'} className="title-image" alt="header" />
         <h1 className="title-text">Visitors</h1>
         <br/>
         <br/>
