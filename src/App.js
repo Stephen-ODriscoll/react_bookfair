@@ -7,7 +7,9 @@ import Visitors from './components/pages/Visitors';
 import Exhibitors from './components/pages/Exhibitors';
 import About from './components/pages/About';
 import Tickets from './components/pages/Tickets';
-import Submitted from './components/pages/Submitted';
+import Register from './components/pages/Register';
+import './CSS/PageTitle.css';
+import './CSS/Header.css';
 import './App.css';
 
 class App extends Component {
@@ -23,7 +25,7 @@ class App extends Component {
           <Route path='/exhibitors' component={Exhibitors} />
           <Route path='/about' component={About} />
           <Route path='/tickets' component={Tickets} />
-          <Route path='/submitted' component={Submitted} />
+          <Route path='/register' component={Register} />
         </div>
       </Router>
     );

@@ -1,16 +1,16 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Modal from 'react-bootstrap/Modal';
-import '../../CSS/PageTitle.css';
 
 class Tickets extends Component {
 
   state = {
+    date: "Date of Attendance",
     accepted: false,
-    runningTotal: 0,
-    showTerms: false
+    showTerms: false,
+    runningTotal: 0
   }
 
   componentDidMount() {
@@ -21,8 +21,14 @@ class Tickets extends Component {
     this.props.history.push('/');
   }
 
+  onChangeDate = (event) => {
+    this.setState({
+      date: event.target.textContent
+    })
+  }
+
   onSubmit = (event) => {
-    this.props.history.push('/submitted');
+    window.print();
   }
 
   onChange = (event) => {
@@ -43,12 +49,14 @@ class Tickets extends Component {
       total = (numChildren * 3) + (numAdults * 5);
       accepted = this.state.accepted;
 
-      this.setState({
-        runningTotal: total
-      })
+      if (total > 0) {
+        this.setState({
+          runningTotal: total
+        })
+      }
     }
 
-    if (total !== 0 && accepted === true) {
+    if (total > 0 && accepted === true) {
       document.getElementById("submit").disabled = false;
     }
     else {
@@ -75,7 +83,7 @@ class Tickets extends Component {
         <img src={process.env.PUBLIC_URL + '/headerImages/tickets.jpg'} className="title-image" alt="header"/>
         <h1 className="title-text">Tickets</h1>
         <br/>
-        <form style={formStyle}>
+        <form style={formStyle} onSubmit={this.onSubmit}>
           <div class="row">
             <div class="col">
               <input type="text" class="form-control" placeholder="First name" required/>
@@ -105,12 +113,21 @@ class Tickets extends Component {
           <br/>
           <div class="row">
             <div class="col">
-              <DropdownButton id="dropdown-button" variant="default" title="Date of attendence">
-                <Dropdown.Item href="#/action-1">July 18th</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">July 19th</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">July 20th</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">July 21st</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">July 22nd</Dropdown.Item>
+              <input type="text" minLength="16" class="form-control" id="childTickets" onChange={this.onChange} placeholder="Card Number" required/>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="date" placeholder="Expiration Date (MM/YY)" required/>
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col">
+              <DropdownButton id="dropdown-button" variant="default" title={this.state.date}>
+                <Dropdown.Item onClick={this.onChangeDate}>July 18th</Dropdown.Item>
+                <Dropdown.Item onClick={this.onChangeDate}>July 19th</Dropdown.Item>
+                <Dropdown.Item onClick={this.onChangeDate}>July 20th</Dropdown.Item>
+                <Dropdown.Item onClick={this.onChangeDate}>July 21st</Dropdown.Item>
+                <Dropdown.Item onClick={this.onChangeDate}>July 22nd</Dropdown.Item>
               </DropdownButton>
             </div>
             <div class="col">
@@ -132,7 +149,7 @@ class Tickets extends Component {
               <button type="button" class="btn-lg" style={buttonStyle} onClick={this.onCancel}>Cancel</button>
             </div>
             <div class="col">
-              <button type="submit" class="btn-lg" id="submit" style={buttonStyle} onClick={this.onSubmit} disabled={true}>Submit</button>
+              <button type="submit" class="btn-lg" id="submit" style={buttonStyle} disabled={true}>Submit</button>
             </div>
           </div>
         </form>

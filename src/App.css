@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 .App {
   text-align: center;
 }
 
+h1 {
+  font-size: "4vw";
+}
+
 *{
+  font-family: 'Roboto', sans-serif;
   font-weight: 100;
   text-align: justify;
 }

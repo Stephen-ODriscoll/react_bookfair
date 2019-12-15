@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Container from 'react-bootstrap/Container';
+import {CircleArrow as ScrollUpButton} from "react-scroll-up-button";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import '../../CSS/PageTitle.css';
 
 const books = [
   {
@@ -61,14 +61,14 @@ class Search extends Component {
       //Inner loop to create children
       for (let x = 0;x < 3; i++, x++) {
         if (i < this.state.toDisplay.length) {
-          children.push(<Col style={colStyle}><h3 style={titleStyle}>{this.state.toDisplay[i].name}</h3><img src={process.env.PUBLIC_URL + '/books/' + this.state.toDisplay[i].id + '.jpg'} style={imgStyle} alt={this.state.toDisplay[i].id} />{this.state.toDisplay[i].desc}</Col>)
+          children.push(<Col key={x} style={colStyle}><h3 style={titleStyle}>{this.state.toDisplay[i].name}</h3><img src={process.env.PUBLIC_URL + '/books/' + this.state.toDisplay[i].id + '.jpg'} style={imgStyle} alt={this.state.toDisplay[i].id} />{this.state.toDisplay[i].desc}</Col>)
         }
         else {
-          children.push(<Col></Col>)
+          children.push(<Col key={x}></Col>)
         }
       }
       //Create the parent and add the children
-      display.push(<Row style={rowStyle}>{children}</Row>)
+      display.push(<Row key={i} style={rowStyle}>{children}</Row>)
     }
 
     if (display.length === 0) {
@@ -92,26 +92,32 @@ class Search extends Component {
 
         <br/>
         <br/>
-        <div class="active-cyan-3 active-cyan-4 mb-4" style = {searchStyle}>
-          <input class="form-control" onChange={this.updateSearch} type="text" placeholder="Search" aria-label="Search" align="right"/>
+        <div className="active-cyan-3 active-cyan-4 mb-4" style = {searchStyle}>
+          <input className="form-control" style = {searchText} onChange={this.updateSearch} type="text" placeholder="Search" aria-label="Search" align="right"/>
         </div>
 
         <Container>
           {this.showBooks()}
         </Container>
+        <ScrollUpButton/>
       </React.Fragment>
     );
   }
 }
 
 const searchStyle = {
-  marginLeft: '8vw',
+  marginLeft: 'auto',
+  marginRight: 'auto',
   width: '40%'
 }
 
+const searchText = {
+  fontSize: '1.5vw'
+}
+
 const titleStyle = {
-  fontSize: "2vw",
-  color: '#fff'
+  textAlign: 'center',
+  fontSize: "2vw"
 }
 
 const rowStyle = {
@@ -119,12 +125,12 @@ const rowStyle = {
 }
 
 const colStyle = {
+  textAlign: 'center',
   borderStyle:'solid',
-  borderWidth: 'thin',
+  borderColor: '#bdb9b0',
+  background: '#ebe5da',
   borderRadius: '10px',
-  background: '#4f4f4f',
   fontSize: "1.2vw",
-  color: '#000',
   padding: '5px',
   margin: '10px'
 }
@@ -133,7 +139,7 @@ const imgStyle = {
   float: 'left',
   width: 'auto',
   height: '15vw',
-  margin: '5px'
+  margin: '4%'
 }
 
 export default Search;

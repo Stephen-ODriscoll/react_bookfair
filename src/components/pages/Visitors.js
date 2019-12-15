@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import '../../CSS/PageTitle.css';
+import Carousel from 'react-bootstrap/Carousel';
+import Container from 'react-bootstrap/Container';
+import {CircleArrow as ScrollUpButton} from "react-scroll-up-button";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class Visitors extends Component {
 
@@ -19,10 +23,9 @@ class Visitors extends Component {
         <br/>
         <br/>
 
-        <button style={buttonStyle} onClick={this.onClick} type="button"  class="btn btn-secondary btn-lg btn-block">Buy tickets</button>
+        <button style={buttonStyle} onClick={this.onClick} type="button"  className="btn btn-secondary btn-lg btn-block">Buy tickets</button>
 
         <div style={pageStyle}>
-          <hr/>
           <br/>
           <img src={process.env.PUBLIC_URL + '/visitorsPhotos/paircUiChaoimh.jpg'} style={img1Style} alt="photo1" />
           <p style={textStyle}>
@@ -55,14 +58,105 @@ class Visitors extends Component {
             hall for the first time. The City Hall was officially opened by de Valera on the 8 September 1936.
           </p>
           <br/>
+          <hr/>
+          <br/>
+          <div style={renownedWritersStyle}>
+            <h1 style={{textAlign: 'center'}}>Renowned Writers</h1>
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  src={process.env.PUBLIC_URL + '/renownedWriters/1.jpg'}
+                  alt="First slide"
+                  width="100%"
+                />
+                <Carousel.Caption>
+                  <h3>Jamie</h3>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  src={process.env.PUBLIC_URL + '/renownedWriters/2.jpg'}
+                  alt="Third slide"
+                  width="100%"
+                />
+                <Carousel.Caption>
+                  <h3>Nash</h3>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  src={process.env.PUBLIC_URL + '/renownedWriters/3.jpg'}
+                  alt="Third slide"
+                  width="100%"
+                />
+                <Carousel.Caption>
+                  <h3>Me</h3>
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
+            </div>
+          <br/>
+          <hr/>
+          <br/>
+          <h1 style={{textAlign: 'center'}}>Gallery</h1>
+          <Container>
+            <Row>
+              <Col>
+                <img style={imgStyle} src={process.env.PUBLIC_URL + '/gallery/1.jpg'} alt="1.jpg" />
+              </Col>
+              <Col>
+                <img style={imgStyle} src={process.env.PUBLIC_URL + '/gallery/2.jpg'} alt="2.jpg" />
+              </Col>
+              <Col>
+                <img style={imgStyle} src={process.env.PUBLIC_URL + '/gallery/3.jpg'} alt="3.jpg" />
+              </Col>
+            </Row>
+            <br/>
+            <Row>
+              <Col>
+                <img style={imgStyle} src={process.env.PUBLIC_URL + '/gallery/4.jpg'} alt="4.jpg" />
+              </Col>
+              <Col>
+                <img style={imgStyle} src={process.env.PUBLIC_URL + '/gallery/1.jpg'} alt="1.jpg" />
+              </Col>
+              <Col>
+                <img style={imgStyle} src={process.env.PUBLIC_URL + '/gallery/2.jpg'} alt="2.jpg" />
+              </Col>
+            </Row>
+            <br/>
+            <Row>
+              <Col>
+                <img style={imgStyle} src={process.env.PUBLIC_URL + '/gallery/3.jpg'} alt="3.jpg" />
+              </Col>
+              <Col>
+                <img style={imgStyle} src={process.env.PUBLIC_URL + '/gallery/4.jpg'} alt="4.jpg" />
+              </Col>
+              <Col>
+                <img style={imgStyle} src={process.env.PUBLIC_URL + '/gallery/1.jpg'} alt="1.jpg" />
+              </Col>
+            </Row>
+          </Container>
+          <br/>
+          <br/>
         </div>
+        <ScrollUpButton/>
       </React.Fragment>
     );
   }
 }
 
+const imgStyle = {
+  width: "100%"
+}
+
 const pageStyle = {
   width: '80%',
+  marginLeft: 'auto',
+  marginRight: 'auto'
+}
+
+const renownedWritersStyle = {
+  width: '40%',
   marginLeft: 'auto',
   marginRight: 'auto'
 }
