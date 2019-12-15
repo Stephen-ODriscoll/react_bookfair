@@ -1,17 +1,25 @@
 {
   "files": {
     "main.css": "/react_bookfair/static/css/main.cc83678f.chunk.css",
-    "main.js": "/react_bookfair/static/js/main.e2b2ba26.chunk.js",
-    "main.js.map": "/react_bookfair/static/js/main.e2b2ba26.chunk.js.map",
-    "runtime-main.js": "/react_bookfair/static/js/runtime-main.0f838177.js",
-    "runtime-main.js.map": "/react_bookfair/static/js/runtime-main.0f838177.js.map",
-    "static/css/2.510409cd.chunk.css": "/react_bookfair/static/css/2.510409cd.chunk.css",
-    "static/js/2.ef71aba6.chunk.js": "/react_bookfair/static/js/2.ef71aba6.chunk.js",
-    "static/js/2.ef71aba6.chunk.js.map": "/react_bookfair/static/js/2.ef71aba6.chunk.js.map",
+    "main.js": "/react_bookfair/static/js/main.6af919ba.chunk.js",
+    "main.js.map": "/react_bookfair/static/js/main.6af919ba.chunk.js.map",
+    "runtime-main.js": "/react_bookfair/static/js/runtime-main.eb9183db.js",
+    "runtime-main.js.map": "/react_bookfair/static/js/runtime-main.eb9183db.js.map",
+    "static/css/2.833dd627.chunk.css": "/react_bookfair/static/css/2.833dd627.chunk.css",
+    "static/js/2.98f1cb74.chunk.js": "/react_bookfair/static/js/2.98f1cb74.chunk.js",
+    "static/js/2.98f1cb74.chunk.js.map": "/react_bookfair/static/js/2.98f1cb74.chunk.js.map",
     "index.html": "/react_bookfair/index.html",
-    "precache-manifest.b54d0a54d0f760b3f57a84c82a66ac89.js": "/react_bookfair/precache-manifest.b54d0a54d0f760b3f57a84c82a66ac89.js",
+    "precache-manifest.499ef99217181d2f1f1c6af849739bae.js": "/react_bookfair/precache-manifest.499ef99217181d2f1f1c6af849739bae.js",
     "service-worker.js": "/react_bookfair/service-worker.js",
-    "static/css/2.510409cd.chunk.css.map": "/react_bookfair/static/css/2.510409cd.chunk.css.map",
-    "static/css/main.cc83678f.chunk.css.map": "/react_bookfair/static/css/main.cc83678f.chunk.css.map"
-  }
+    "static/css/2.833dd627.chunk.css.map": "/react_bookfair/static/css/2.833dd627.chunk.css.map",
+    "static/css/main.cc83678f.chunk.css.map": "/react_bookfair/static/css/main.cc83678f.chunk.css.map",
+    "static/js/2.98f1cb74.chunk.js.LICENSE": "/react_bookfair/static/js/2.98f1cb74.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb9183db.js",
+    "static/css/2.833dd627.chunk.css",
+    "static/js/2.98f1cb74.chunk.js",
+    "static/css/main.cc83678f.chunk.css",
+    "static/js/main.6af919ba.chunk.js"
+  ]
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react_bookfair/precache-manifest.b54d0a54d0f760b3f57a84c82a66ac89.js"
+  "/react_bookfair/precache-manifest.499ef99217181d2f1f1c6af849739bae.js"
 );
 
 self.addEventListener('message', (event) => {
