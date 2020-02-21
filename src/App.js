@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect,  Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Home from './components/pages/Home';
 import Search from './components/pages/Search';
@@ -26,6 +26,7 @@ class App extends Component {
           <Route path='/about' component={About} />
           <Route path='/tickets' component={Tickets} />
           <Route path='/register' component={Register} />
+          <Redirect from="/react_bookfair" exact to="/" />
         </div>
       </Router>
     );
